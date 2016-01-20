@@ -1,5 +1,5 @@
 # CSCI2961-01
-## Open Source Class Fall Semester 2015
+## Open Source Class Spring Semester 2016
 
 ## Instructor: Mukkai Krishnamoorthy
 
