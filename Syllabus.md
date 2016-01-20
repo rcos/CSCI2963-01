@@ -5,9 +5,9 @@
 
 ### Undergraduate Teaching Assistants:
 
-- Seve Ibarluzea '17
+- Jim Boulter '17
 
--  Joseph Lee '17
+-  Aaron Gunderson '17
 
 - Thomas Manzini '16
 
