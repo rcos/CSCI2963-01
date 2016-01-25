@@ -5,9 +5,9 @@
 
 ### Undergraduate Teaching Assistants:
 
-- Seve Ibarluzea '17
+- Jim Boulter '17
 
--  Joseph Lee '17
+-  Aaron Gunderson '17
 
 - Thomas Manzini '16
 
@@ -60,7 +60,7 @@ in preparation for jobs in industry or for more advanced courses.
 
 ## Grading Criteria:
 
-- 2 Quizzes (15 points each) - 30%
+- 2 Quizzes (15 points each) - 30%  (**4th March, 22nd April**)
 - 10 Labs (3 points each) - 30%
 - Project - 40%
 
