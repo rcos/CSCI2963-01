@@ -1,0 +1,18 @@
+angular.module('itosApp').run(['$templateCache', function($templateCache) {
+  'use strict';
+
+  $templateCache.put('app/main/main.html',
+    "<div class=main><header class=\"hero-unit banner\" ng-class=\"{'small-banner': ('nav'!==mode)}\"><div class=container><h1>CSCI 2963-01</h1><h3 class=lead>Intro to Open Source - Spring 2016</h3><div class=text-center><ul class=\"nav center-pills nav-pills-inverse border-pills-inverse\" ng-repeat=\"item in things\"><li role=presentation><a ng-href={{item.link}}><div class=img-title>{{item.name}}</div></a></li></ul></div></div></header><div class=\"course-content banner\"><div class=container><div ng-show=\"mode == 'nav'\"><div class=nav-center><ul class=\"nav nav-tabs\"><li role=presentation ng-repeat=\"item in resources\" ng-class=\"{active: (active==item.link)}\"><a ng-href=\"?content={{item.link}}\">{{item.name}}</a></li></ul><h4 class=\"lead text-left\"><a href={{link}}>{{page}}</a>:</h4><div class=imported-md><div ng-show=\"(active == 'about' || active == 'photos' || active == 'fall2015projects')\"><div class=text-left ng-repeat=\"item in classContentText\"><div ng-bind-html=item></div><hr></div></div><div ng-show=\"(active == 'howto' || active == 'labs' || active == 'outlines')\" class=text-left><table class=\"table table-hover\"><tr ng-repeat=\"item in classContentText\" ng-click=goToDetails(item);><td ng-class=\"{'borderless':$first}\">{{item.name}}</td></tr></table></div><div ng-show=\"active == 'lectures'\" class=text-left><table class=\"table table-hover\"><tr ng-repeat=\"item in classContentText\" ng-click=goToDetails(item);><td ng-class=\"{'borderless':$first}\">{{item.name}}</td></tr></table></div></div></div></div><div ng-show=\"mode == 'details'\"><h4 class=lead><i class=\"fa fa-arrow-circle-o-left\" ng-click=goToNav()></i><a href={{link}}>{{page}}</a>:</h4><div class=imported-md><div class=text-left ng-repeat=\"item in classContentText\"><div ng-show=\"type == 'html'\"><div ng-bind-html=item></div></div><div ng-show=\"type == 'pdf'\"><object ng-show=item data={{item}} type=application/pdf style=\"width: 100%; height: {{height}}px\"></object></div></div></div></div></div></div><footer class=footer><div class=container><span class=site-footer-owner><a ng-href=https://github.com/rcos/CSCI2963-01>Csci2963-01</a> is maintained by <a ng-href=https://github.com/rcos>rcos</a>.</span></div></footer></div>"
+  );
+
+
+  $templateCache.put('components/modal/modal.html',
+    "<div class=modal-header><button ng-if=modal.dismissable type=button ng-click=$dismiss() class=close>&times;</button><h4 ng-if=modal.title ng-bind=modal.title class=modal-title></h4></div><div class=modal-body><p ng-if=modal.text ng-bind=modal.text></p><div ng-if=modal.html ng-bind-html=modal.html></div></div><div class=modal-footer><button ng-repeat=\"button in modal.buttons\" ng-class=button.classes ng-click=button.click($event) ng-bind=button.text class=btn></button></div>"
+  );
+
+
+  $templateCache.put('components/navbar/navbar.html',
+    "<div class=\"navbar navbar-default navbar-static-top\" ng-controller=NavbarCtrl><div class=container><div class=navbar-header><button class=navbar-toggle type=button ng-click=\"isCollapsed = !isCollapsed\"><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a href=\"/\" class=navbar-brand>itos</a></div><div collapse=isCollapsed class=\"navbar-collapse collapse\" id=navbar-main><ul class=\"nav navbar-nav\"><li ng-repeat=\"item in menu\" ng-class=\"{active: isActive(item.link)}\"><a ng-href={{item.link}}>{{item.title}}</a></li></ul></div></div></div>"
+  );
+
+}]);
