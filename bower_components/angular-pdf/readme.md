@@ -1,6 +1,6 @@
-# angular-pdf [![Build Status](https://travis-ci.org/sayanee/angularjs-pdf.png)](https://travis-ci.org/sayanee/angularjs-pdf) [![Dependency Status](https://gemnasium.com/sayanee/angularjs-pdf.png)](https://gemnasium.com/sayanee/angularjs-pdf)
+# angular-pdf [![Build Status](https://travis-ci.org/sayanee/angularjs-pdf.svg)](https://travis-ci.org/sayanee/angularjs-pdf) [![Dependency Status](https://gemnasium.com/sayanee/angularjs-pdf.svg)](https://gemnasium.com/sayanee/angularjs-pdf)
 
-Version: 1.2.0
+Version: 1.2.9
 
 >An [AngularJS](http://angularjs.org/) [directive](http://docs.angularjs.org/guide/directive) `ng-pdf` to display PDF files with [PDFJS](http://mozilla.github.io/pdf.js/).
 
@@ -18,10 +18,10 @@ Check [`bower.json` file](https://github.com/sayanee/angularjs-pdf/blob/master/b
 - [PDFJS](http://mozilla.github.io/pdf.js/) - build the files [`pdf.js` and `pdf.worker.js`](https://github.com/mozilla/pdf.js#building-pdfjs)
 - [Evergreen browsers](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#what-browsers-are-supported)
 
-###Features
+##Features
 
 1. next / previous page
-- zoom in / out
+- zoom in / out / fit 100%
 - rotate clockwise
 - jump to a page number
 - when scrolling, the pdf controls will get fixed position at the top
@@ -96,10 +96,11 @@ Check [`bower.json` file](https://github.com/sayanee/angularjs-pdf/blob/master/b
     <button ng-click="goPrevious()"><</span></button>
     <button ng-click="goNext()">></span></button>
     ```
-1. **Zoom in / out**: Include the controls in the view file as defined in the attribute `template-url`
+1. **Zoom in / out / fit 100%**: Include the controls in the view file as defined in the attribute `template-url`
 
     ```
     <button ng-click="zoomIn()">+</span></button>
+    <button ng-click="fit()">100%</span></button>
     <button ng-click="zoomOut()">-</span></button>
     ```
 1. **Rotate clockwise**: Include the controls in the view file as defined in the attribute `template-url` and the initial class `rotate0`
@@ -192,15 +193,15 @@ Check [`bower.json` file](https://github.com/sayanee/angularjs-pdf/blob/master/b
 
 PDF example used is [Relativity: The Special and General Theory by Albert Einstein](http://www.gutenberg.org/ebooks/30155) as kindly organized and made available free by [Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page).
 
-#Contribute
+##Contribute
 
-This project is an **OPEN Open Source Project**. This means that:
+This project is an [OPEN Open Source Project](http://openopensource.org/). This means that:
 
 > Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
 
 Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for details.
 
-#Versioning
+##Versioning
 
 This repository follows the [Semantic Versioning](http://semver.org/) guidelines:
 
