@@ -9,4 +9,4 @@ They will clarify.
 
 - If you are confused or struck on a problem please ask for help.
 
-- Please try to complete the lab on he day it is assigned or latest by the beginning of next lab (usually next Friday)
+- Please try to complete the lab on the day it is assigned or latest by the beginning of next lab (usually next Friday)
