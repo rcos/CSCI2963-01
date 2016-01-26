@@ -66,8 +66,8 @@ in preparation for jobs in industry or for more advanced courses.
 
 ## Quiz Dates
 
-- Quiz 1 16th October
-- Quiz 2 20th November
+- Quiz 1 4th March
+- Quiz 2 22nd April
 
 93 and above A; 90 and above A-; 85 and above B+; 80 and above B; 75 and above B-; 70 and above C+; 65 and above C; 60 and above C-; 55 and above D+; 50 and above D.
 
