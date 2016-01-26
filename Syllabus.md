@@ -1,4 +1,4 @@
-# CSCI 2963-1 Introduction to Open Source
+# CSCI 2963-01 Introduction to Open Source
 ## Instructor: Mukkai Krishnamoorthy
 ## Class Place and Time:  Carnegie 112 T, F  Noon - 1:50 pm
 ### Office Hours: T, F 2 - 3:30 pm
