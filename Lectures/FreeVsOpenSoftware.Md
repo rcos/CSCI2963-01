@@ -4,7 +4,7 @@
  
 ## Freedom 1) Freedom to study the program how it works and change to your likes (Access to the source code is a precondition)
  
-## Freedom 2)  Freedom to distribute copies to others so that they canbenefit
+## Freedom 2)  Freedom to distribute copies to others so that they can benefit
  
 ## Freedom 3) Freedom to distribute modified versions of the code so that others can benefit from your contributions.
  
