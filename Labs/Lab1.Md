@@ -2,7 +2,7 @@
 
 ## Github, Linux Command Line Instructions, Regular Expressions and Visual Programming
 
-## Maintain a markdown page for your lab work. You can copy paste screen shots. You will be graded at the end of the lab or latest by beginning of the lab. Please have your name and a photo in the markdown page . [Here is a sample page](https://github.com/mskmoorthy/Doc-ex1/blob/master/lab-1-sample.Md) 
+## Maintain a markdown page for your lab work. You can copy paste screen shots. You will be graded at the end of the lab or latest by beginning of the next lab. Please have your name and a photo in the markdown page . [Here is a sample page](https://github.com/mskmoorthy/Doc-ex1/blob/master/lab-1-sample.Md) 
 ###
 - markdown syntax is [here](https://help.github.com/articles/basic-writing-and-formatting-syntax/) and [here](https://guides.github.com/features/mastering-markdown/) 
 - If you already have github accounts you can skip the first two parts
