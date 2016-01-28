@@ -11,47 +11,47 @@ a. Create and setup a github account (You can skip this part if you already ha e
   2. go through this tutorial to set up a github account http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1
 
 b. Create a bio page in your repository titled `bio.md`
-  - Please have your name and a photo in the markdown page . [Here is a sample page](https://github.com/mskmoorthy/Doc-ex1/blob/master/lab-1-sample.Md) 
-  - You can copy and paste screen shots. 
+  1. Please have your name and a photo in the markdown page . [Here is a sample page](https://github.com/mskmoorthy/Doc-ex1/blob/master/lab-1-sample.Md) 
+  2. You can copy and paste screen shots. 
 
 c. Reading assignments - make sure to reflect on these in a lab1.md file in your repository 
   1. Please read the 10 criteria of Open Source Definition http://opensource.org/osd and understand why they are important.
 
   2. Please read Eric Raymond's article [Smart Questions](http://www.catb.org/esr/faqs/smart-questions.html) How to ask the question The Smart Way . 
-  - Do you have more suggestions for How To Answer Questions in a Helpful Way (from your past experience) http://www.catb.org/esr/faqs/smart-questions.html#idp64834912 
-  - List at least two.
+    - Do you have more suggestions for How To Answer Questions in a Helpful Way (from your past experience) http://www.catb.org/esr/faqs/smart-questions.html#idp64834912 
+    - List at least two.
 
 d. Linux 
   1. Boot linux (Ubuntu) through a USB (Or dual boot)
-  - Get familiar with the directory structure.
-  - Practice with ls, cd, mkdir, chmod commands - when in doubt search the web to find the answer.
+    - Get familiar with the directory structure.
+    - Practice with ls, cd, mkdir, chmod commands - when in doubt search the web to find the answer.
 
   2. Practice with grep, egrep commands
-  - Look at the manual (`man grep`) to see how to use these commands. 
-  - Read the first chapter in [Beautiful Code](https://github.com/onestraw/ebook/blob/master/09_other/%E4%BB%A3%E7%A0%81%E4%B9%8B%E7%BE%8EBeautiful%20Code.pdf) about the development and implementation (in C) of a very simple grep  
+    - Look at the manual (`man grep`) to see how to use these commands. 
+    - Read the first chapter in [Beautiful Code](https://github.com/onestraw/ebook/blob/master/09_other/%E4%BB%A3%E7%A0%81%E4%B9%8B%E7%BE%8EBeautiful%20Code.pdf) about the development and implementation (in C) of a very simple grep  
 
   3. Install tree and get the directory structure. 
-  - `sudo apt get install tree`
-  - `man tree`
-  - Take a screenshot and add to `lab1.md`
+    - `sudo apt get install tree`
+    - `man tree`
+    - Take a screenshot and add to `lab1.md`
 
 e. Regex
   1. In your Foundations of Computer Science class you learned about Regular expressions. (If you have not taken Foundations of Computer Science class, please talk to the instructor for an explination)  
   2. Please do all the practice problems given [here](http://regexone.com/) (moving over Interactive Tutorial in the top right corner will get this). 
-  - To get full credit, do at least 7 problems.
-  - Take a screenshot and add to `lab1.md`
- 3. Go through the tutorials [here] (https://regexcrossword.com/challenges/tutorial/puzzles/1) 
-  - Do all the problems and at least four problems on beginner level [here](https://regexcrossword.com/challenges/beginner/puzzles/1 ).  
-  - Take a screenshot and add to `lab1.md`
+    - To get full credit, do at least 7 problems.
+    - Take a screenshot and add to `lab1.md`
+  3. Go through the tutorials [here] (https://regexcrossword.com/challenges/tutorial/puzzles/1) 
+    - Do all the problems and at least four problems on beginner level [here](https://regexcrossword.com/challenges/beginner/puzzles/1 ).
+    - Take a screenshot and add to `lab1.md`
 
 
 f. Play with [Snap](http://snap.berkeley.edu/) or [CSDT](https://community.csdt.rpi.edu/) or
 [Blockly](https://blockly-games.appspot.com/) 
-  - Create some thing using either of the first two or solve [this](https://blockly-games.appspot.com/maze?lang=en&level=10&skin=0) using blockly
-  - Take a screenshot and add to `lab1.md`
+  1. Create some thing using either of the first two or solve [this](https://blockly-games.appspot.com/maze?lang=en&level=10&skin=0) using blockly
+  2. Take a screenshot and add to `lab1.md`
 
 
 g. Reflection
- - Start thinking/finding a problem/project that interests you 
- - Write a paragraph how you are doing this activity.
- - Take a screenshot and add to `lab1.md`
+ 1. Start thinking/finding a problem/project that interests you 
+ 2. Write a paragraph how you are doing this activity.
+ 3. Take a screenshot and add to `lab1.md`
