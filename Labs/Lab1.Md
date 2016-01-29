@@ -31,7 +31,7 @@ d. Linux
     - Read the first chapter in [Beautiful Code](https://github.com/onestraw/ebook/blob/master/09_other/%E4%BB%A3%E7%A0%81%E4%B9%8B%E7%BE%8EBeautiful%20Code.pdf) about the development and implementation (in C) of a very simple grep  
 
   3. Install tree and get the directory structure. 
-    - `sudo apt get install tree`
+    - `sudo apt-get install tree`
     - `man tree`
     - Take a screenshot and add to `lab1.md`
 
