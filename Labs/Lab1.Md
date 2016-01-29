@@ -48,7 +48,7 @@ e. Regex
 f. Play with [Snap](http://snap.berkeley.edu/) or [CSDT](https://community.csdt.rpi.edu/) or
 [Blockly](https://blockly-games.appspot.com/) 
   1. Create some thing using either of the first two or solve [this](https://blockly-games.appspot.com/maze?lang=en&level=10&skin=0) using blockly
-  2. Take a screenshot and add to `lab1.md`
+  2. Add to `lab1.md`
 
 
 g. Reflection
