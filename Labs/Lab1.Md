@@ -5,7 +5,7 @@
 ## Maintain a repository on github for all your lab work. Inside, you should create a markdown page for this lab's work. You will be graded at the end of the lab or latest by beginning of the next lab.###
 > markdown syntax is [here](https://help.github.com/articles/basic-writing-and-formatting-syntax/) and [here](https://guides.github.com/features/mastering-markdown/) 
 
-a. Create and setup a github account (You can skip this part if you already ha e one)
+a. Create and setup a github account (You can skip this part if you already have one)
   1. go through this tutorial https://try.github.io/levels/1/challenges/1
 
   2. go through this tutorial to set up a github account http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1
