@@ -54,4 +54,4 @@ f. Play with [Snap](http://snap.berkeley.edu/) or [CSDT](https://community.csdt.
 g. Reflection
  1. Start thinking/finding a problem/project that interests you 
  2. Write a paragraph how you are doing this activity.
- 3. Take a screenshot and add to `lab1.md`
+ 3. And add to `lab1.md`
