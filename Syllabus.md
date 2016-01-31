@@ -11,6 +11,8 @@
 
 - Thomas Manzini '16
 
+- Matthew Mawby '18
+
 - Kiana McNellis '17
 
 ##  Lectures are on Tuesdays and Labs are on Fridays
