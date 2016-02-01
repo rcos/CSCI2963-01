@@ -1,7 +1,7 @@
 Build Systems
 #############
 
-RPI Open Source Software - Fall 2015
+RPI Open Source Software - Spring 2016
 
 Brad King, Kitware, Inc.
 
