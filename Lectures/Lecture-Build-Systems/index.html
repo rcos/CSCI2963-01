@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Build Systems &mdash; Sample Slides  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="Sample Slides  documentation" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="build-systems">
+
+<h1>Build Systems</h1>
+
+<p>RPI Open Source Software - Spring 2016</p>
+<p>Brad King, Kitware, Inc.</p>
+<ul class="simple">
+<li>Maintainer of CMake</li>
+<li>RPI '00 BS, '08 PhD</li>
+</ul>
+
+
+
+<div class="slide-no">1</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-2" id="introduction">
+
+<h2>Introduction</h2>
+
+
+
+
+<div class="slide-no">2</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="what-is-a-build-system">
+
+<h3>What is a Build System?</h3>
+
+<ul class="simple">
+<li>Specifies how to turn source files into useful programs.</li>
+</ul>
+<div><img height="120" src="_images/blockdiag-67f8d570f17a09b2f75b1121f81aeb1ee19ee3ed.png" width="704" /></div><ul class="simple">
+<li>Organizes code to share among programs.</li>
+<li>Requirements vary by language, tools, and platform;
+here we focus on <code class="docutils literal"><span class="pre">C</span></code> and <code class="docutils literal"><span class="pre">C++</span></code> languages.</li>
+</ul>
+
+
+
+<div class="slide-no">3</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-2" id="motivation">
+
+<h2>Motivation</h2>
+
+
+
+
+<div class="slide-no">4</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="one-source-file">
+
+<h3>One Source File</h3>
+
+<p>Consider a source file <code class="docutils literal"><span class="pre">hi.c</span></code>:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Compile and run the program:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cc hi.c -o hi
+<span class="gp">$</span> ./hi
+<span class="go">hello</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">5</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-system-compiler-driver">
+
+<h3>Build System: Compiler Driver</h3>
+
+<p>The compiler driver is a simple build system.</p>
+<p>It runs the compiler and linker internally:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> gcc hi.c -o hi -###
+<span class="go">cc1 hi.c -o /tmp/tmp1.o</span>
+<span class="go">collect2 -o hi /tmp/tmp1.o -lgcc ...</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">6</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="reusable-source-file">
+
+<h3>Reusable Source File</h3>
+
+<p>Declare a <code class="docutils literal"><span class="pre">hello()</span></code> function in a <code class="docutils literal"><span class="pre">hello.h</span></code> header:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="nf">hello</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Implement the function in a <code class="docutils literal"><span class="pre">hello.c</span></code> source:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;hello.h&quot;</span>
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">void</span> <span class="nf">hello</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">7</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id4">
+
+<h3>Reusable Source File</h3>
+
+<p>Update main program in the <code class="docutils literal"><span class="pre">hi.c</span></code> source:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;hello.h&quot;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">hello</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Give both source files to the compiler driver:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cc hi.c hello.c -o hi
+<span class="gp">$</span> ./hi
+<span class="go">hello</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">8</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id5">
+
+<h3>Reusable Source File</h3>
+
+<p>The compiler driver runs the compiler and linker internally:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> gcc hi.c hello.c -o hi -###
+<span class="go">cc1 hi.c -o /tmp/tmp1.o</span>
+<span class="go">cc1 hello.c -o /tmp/tmp2.o</span>
+<span class="go">collect2 -o hi /tmp/tmp1.o /tmp/tmp2.o -lgcc ...</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">9</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="sharing-source-files">
+
+<h3>Sharing Source Files</h3>
+
+<p>Rename original <code class="docutils literal"><span class="pre">hi.c</span></code> to <code class="docutils literal"><span class="pre">hi1.c</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mv hi.c hi1.c
+</pre></div>
+</div>
+<p>Add a <code class="docutils literal"><span class="pre">hi2.c</span></code> executable sharing the <code class="docutils literal"><span class="pre">hello()</span></code> function:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;hello.h&quot;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">hello</span><span class="p">();</span>
+  <span class="n">hello</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">10</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id6">
+
+<h3>Sharing Source Files</h3>
+
+<p>Use <code class="docutils literal"><span class="pre">hello.c</span></code> source file for both programs:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cc hi1.c hello.c -o hi1
+<span class="gp">$</span> cc hi2.c hello.c -o hi2
+<span class="gp">$</span> ./hi1
+<span class="go">hello</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello</span>
+<span class="go">hello</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">11</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-system-shell-script">
+
+<h3>Build System: Shell Script</h3>
+
+<p>List commands in a shell script, e.g. <code class="docutils literal"><span class="pre">build.sh</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>cc hi1.c hello.c -o hi1
+cc hi2.c hello.c -o hi2
+</pre></div>
+</div>
+<p>Run the script to drive the build:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sh -x build.sh
+<span class="go">+ cc hi1.c hello.c -o hi1</span>
+<span class="go">+ cc hi2.c hello.c -o hi2</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">12</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id1">
+
+<h3>Sharing Source Files</h3>
+
+<p>The compiler driver runs the compiler and linker internally:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> gcc hi1.c hello.c -o hi1 -###
+<span class="go">cc1 hi1.c -o /tmp/tmp1.o</span>
+<span class="go">cc1 hello.c -o /tmp/tmp2.o</span>
+<span class="go">collect2 -o hi1 /tmp/tmp1.o /tmp/tmp2.o -lgcc ...</span>
+<span class="gp">$</span> gcc hi2.c hello.c -o hi2 -###
+<span class="go">cc1 hi2.c -o /tmp/tmp1.o</span>
+<span class="go">cc1 hello.c -o /tmp/tmp2.o</span>
+<span class="go">collect2 -o hi2 /tmp/tmp1.o /tmp/tmp2.o -lgcc ...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Compiles <code class="docutils literal"><span class="pre">hello.c</span></code> twice.</li>
+<li>Re-uses source file but not compiler output.</li>
+</ul>
+
+
+
+<div class="slide-no">13</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="sharing-object-files">
+
+<h3>Sharing Object Files</h3>
+
+<ul class="simple">
+<li>Compile <code class="docutils literal"><span class="pre">hello.c</span></code> to an <em>object file</em>.</li>
+<li>Use the object file to link each executable.</li>
+<li>Called &quot;separate compilation&quot;.</li>
+</ul>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sh -x build.sh
+<span class="go">+ cc -c hello.c -o hello.o</span>
+<span class="go">+ cc hi1.c hello.o -o hi1</span>
+<span class="go">+ cc hi2.c hello.o -o hi2</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello</span>
+<span class="go">hello</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">14</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id7">
+
+<h3>Sharing Object Files</h3>
+
+<p>The compiler driver runs the compiler and linker internally:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> gcc hello.c -o hello.o -###
+<span class="go">cc1 hello.c -o hello.o</span>
+<span class="gp">$</span> gcc hi1.c hello.o -o hi1 -###
+<span class="go">cc1 hi1.c -o /tmp/tmp1.o</span>
+<span class="go">collect2 -o hi1 /tmp/tmp1.o hello.o -lgcc ...</span>
+<span class="gp">$</span> gcc hi2.c hello.o -o hi2 -###
+<span class="go">cc1 hi2.c -o /tmp/tmp1.o</span>
+<span class="go">collect2 -o hi2 /tmp/tmp1.o hello.o -lgcc ...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Compiles <code class="docutils literal"><span class="pre">hello.c</span></code> only once.</li>
+</ul>
+
+
+
+<div class="slide-no">15</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="sharing-multiple-sources">
+
+<h3>Sharing Multiple Sources</h3>
+
+<p>Split <code class="docutils literal"><span class="pre">hello.c</span></code> into <code class="docutils literal"><span class="pre">hello1.c</span></code>:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &quot;hello.h&quot;</span>
+<span class="k">extern</span> <span class="kt">void</span> <span class="nf">print_hello</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">hello</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print_hello</span><span class="p">(</span><span class="s">&quot;world&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and <code class="docutils literal"><span class="pre">hello2.c</span></code>:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">void</span> <span class="nf">print_hello</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">16</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id8">
+
+<h3>Sharing Multiple Sources</h3>
+
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sh -x build.sh
+<span class="go">+ cc -c hello1.c -o hello1.o</span>
+<span class="go">+ cc -c hello2.c -o hello2.o</span>
+<span class="go">+ cc -c hi1.c -o hi1.o</span>
+<span class="go">+ cc -c hi2.c -o hi2.o</span>
+<span class="go">+ cc hi1.o hello1.o hello2.o -o hi1</span>
+<span class="go">+ cc hi2.o hello1.o hello2.o -o hi2</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello: world</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello: world</span>
+<span class="go">hello: world</span>
+</pre></div>
+</div>
+<p>Callers of <code class="docutils literal"><span class="pre">hello()</span></code> function must use both
+<code class="docutils literal"><span class="pre">hello1.o</span></code> and <code class="docutils literal"><span class="pre">hello2.o</span></code> together, but
+should not have to know that.</p>
+
+
+
+<div class="slide-no">17</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="static-libraries">
+
+<h3>Static Libraries</h3>
+
+<p>Create an archive of object files; use to link executables:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sh -x build.sh
+<span class="go">+ cc -c hello1.c -o hello1.o</span>
+<span class="go">+ cc -c hello2.c -o hello2.o</span>
+<span class="go">+ ar qc libhello.a hello1.o hello2.o</span>
+<span class="go">+ cc -c hi1.c -o hi1.o</span>
+<span class="go">+ cc -c hi2.c -o hi2.o</span>
+<span class="go">+ cc hi1.o libhello.a -o hi1</span>
+<span class="go">+ cc hi2.o libhello.a -o hi2</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello: world</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello: world</span>
+<span class="go">hello: world</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">18</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id9">
+
+<h3>Static Libraries</h3>
+
+<p>List the object files in the archive:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ar t libhello.a
+<span class="go">hello1.o</span>
+<span class="go">hello2.o</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">19</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="shared-libraries">
+
+<h3>Shared Libraries</h3>
+
+<p>Link object files into a shared library; link executables to it:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sh -x build.sh
+<span class="go">+ cc -fPIC -c hello1.c -o hello1.o</span>
+<span class="go">+ cc -fPIC -c hello2.c -o hello2.o</span>
+<span class="go">+ cc -shared -o libhello.so hello1.o hello2.o</span>
+<span class="go">+ cc -c hi1.c -o hi1.o</span>
+<span class="go">+ cc -c hi2.c -o hi2.o</span>
+<span class="go">+ cc hi1.o libhello.so -o hi1 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="go">+ cc hi2.o libhello.so -o hi2 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello: world</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello: world</span>
+<span class="go">hello: world</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">20</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id10">
+
+<h3>Shared Libraries</h3>
+
+<p>View dependency of executable on shared library:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> readelf -d hi1 <span class="p">|</span> grep NEEDED
+<span class="go"> 0x0000000000000001 (NEEDED) Shared library: [libhello.so]</span>
+<span class="go"> 0x0000000000000001 (NEEDED) Shared library: [libc.so.6]</span>
+<span class="gp">$</span> readelf -d hi1 <span class="p">|</span> grep RPATH
+<span class="go"> 0x000000000000000f (RPATH) Library rpath: [$ORIGIN]</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">21</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="review-of-file-types">
+
+<h3>Review of File Types</h3>
+
+<dl class="docutils">
+<dt><strong>Source files</strong> (<code class="docutils literal"><span class="pre">*.c</span></code>, <code class="docutils literal"><span class="pre">*.cpp</span></code>)</dt>
+<dd>Define &quot;symbols&quot; implementing functions and storage of global data.</dd>
+<dt><strong>Header files</strong> (<code class="docutils literal"><span class="pre">*.h</span></code>, <code class="docutils literal"><span class="pre">*.hpp</span></code>)</dt>
+<dd>Define interfaces shared among source files
+(e.g. function prototypes).</dd>
+<dt><strong>Object files</strong> (<code class="docutils literal"><span class="pre">*.o</span></code>, <code class="docutils literal"><span class="pre">*.obj</span></code> on Windows)</dt>
+<dd>Compiler output from source files.</dd>
+<dt><strong>Executables</strong> (no extension, <code class="docutils literal"><span class="pre">*.exe</span></code> on Windows)</dt>
+<dd>Object files linked together into programs with <code class="docutils literal"><span class="pre">main</span></code>.</dd>
+</dl>
+
+
+
+<div class="slide-no">22</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id11">
+
+<h3>Review of File Types</h3>
+
+<dl class="docutils">
+<dt><strong>Static libraries</strong> (<code class="docutils literal"><span class="pre">*.a</span></code>, <code class="docutils literal"><span class="pre">*.lib</span></code> with MS tools)</dt>
+<dd><ul class="first last simple">
+<li>Archives of object files.</li>
+<li>Searched by linker for objects implementing needed symbols.</li>
+<li>All symbols with &quot;extern linkage&quot; exposed publicly.</li>
+</ul>
+</dd>
+<dt><strong>Shared libraries</strong> (<code class="docutils literal"><span class="pre">*.so</span></code>, <code class="docutils literal"><span class="pre">*.dll</span></code> on Windows)</dt>
+<dd><ul class="first last simple">
+<li>Objects linked together into libraries loaded by programs at runtime.</li>
+<li>A subset of symbols with &quot;extern linkage&quot; exposed publicly
+via explicit markup.</li>
+<li>On Windows, associated &quot;import library&quot; (<code class="docutils literal"><span class="pre">.lib</span></code>).</li>
+</ul>
+</dd>
+</dl>
+
+
+
+<div class="slide-no">23</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id2">
+
+<h3>Build System: Shell Script</h3>
+
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">build.sh</span></code> always runs all commands.</li>
+<li>No concurrency.</li>
+<li>No partial builds.</li>
+<li>No incremental rebuilds.</li>
+<li>Does not scale.</li>
+<li>Rarely used in practice.</li>
+</ul>
+
+
+
+<div class="slide-no">24</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-2" id="build-system-make">
+
+<h2>Build System: Make</h2>
+
+
+
+
+<div class="slide-no">25</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-dependencies">
+
+<h3>Build Dependencies</h3>
+
+<div><img height="360" src="_images/blockdiag-5d0803e5748a0c8fa3b8c14a777aeff989f7f037.png" width="832" /></div>
+
+
+<div class="slide-no">26</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="makefile">
+
+<h3>Makefile</h3>
+
+<p>A <code class="docutils literal"><span class="pre">Makefile</span></code> expresses build dependencies:</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span class="nf">all</span><span class="o">:</span> <span class="n">hi</span>1 <span class="n">hi</span>2
+<span class="nf">hi1</span><span class="o">:</span> <span class="n">hi</span>1.<span class="n">o</span> <span class="n">libhello</span>.<span class="n">so</span>
+<span class="nf">hi2</span><span class="o">:</span> <span class="n">hi</span>2.<span class="n">o</span> <span class="n">libhello</span>.<span class="n">so</span>
+<span class="nf">hi1.o</span><span class="o">:</span> <span class="n">hi</span>1.<span class="n">c</span>
+<span class="nf">hi2.o</span><span class="o">:</span> <span class="n">hi</span>2.<span class="n">c</span>
+<span class="nf">libhello.so</span><span class="o">:</span> <span class="n">hello</span>1.<span class="n">o</span> <span class="n">hello</span>2.<span class="n">o</span>
+<span class="nf">hello1.o</span><span class="o">:</span> <span class="n">hello</span>1.<span class="n">c</span>
+<span class="nf">hello2.o</span><span class="o">:</span> <span class="n">hello</span>2.<span class="n">c</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">27</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id12">
+
+<h3>Makefile</h3>
+
+<p>A <code class="docutils literal"><span class="pre">Makefile</span></code> also specifies build commands:</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span class="nf">all</span><span class="o">:</span> <span class="n">hi</span>1 <span class="n">hi</span>2
+<span class="nf">hi1</span><span class="o">:</span> <span class="n">hi</span>1.<span class="n">o</span> <span class="n">libhello</span>.<span class="n">so</span>
+        cc hi1.o libhello.so -o hi1 -Wl,-rpath<span class="o">=</span><span class="s1">&#39;$$ORIGIN&#39;</span>
+<span class="nf">hi2</span><span class="o">:</span> <span class="n">hi</span>2.<span class="n">o</span> <span class="n">libhello</span>.<span class="n">so</span>
+        cc hi2.o libhello.so -o hi2 -Wl,-rpath<span class="o">=</span><span class="s1">&#39;$$ORIGIN&#39;</span>
+<span class="nf">hi1.o</span><span class="o">:</span> <span class="n">hi</span>1.<span class="n">c</span>
+        cc -c hi1.c -o hi1.o
+<span class="nf">hi2.o</span><span class="o">:</span> <span class="n">hi</span>2.<span class="n">c</span>
+        cc -c hi2.c -o hi2.o
+<span class="nf">libhello.so</span><span class="o">:</span> <span class="n">hello</span>1.<span class="n">o</span> <span class="n">hello</span>2.<span class="n">o</span>
+        cc -shared -o libhello.so hello1.o hello2.o
+<span class="nf">hello1.o</span><span class="o">:</span> <span class="n">hello</span>1.<span class="n">c</span>
+        cc -fPIC -c hello1.c -o hello1.o
+<span class="nf">hello2.o</span><span class="o">:</span> <span class="n">hello</span>2.<span class="n">c</span>
+        cc -fPIC -c hello2.c -o hello2.o
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">28</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="run-make-tool">
+
+<h3>Run Make Tool</h3>
+
+<p>Run <code class="docutils literal"><span class="pre">make</span></code> tool to drive build process:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
+<span class="go">cc -c hi1.c -o hi1.o</span>
+<span class="go">cc -fPIC -c hello1.c -o hello1.o</span>
+<span class="go">cc -fPIC -c hello2.c -o hello2.o</span>
+<span class="go">cc -shared -o libhello.so hello1.o hello2.o</span>
+<span class="go">cc hi1.o libhello.so -o hi1 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="go">cc -c hi2.c -o hi2.o</span>
+<span class="go">cc hi2.o libhello.so -o hi2 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello: world</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello: world</span>
+<span class="go">hello: world</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">29</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id13">
+
+<h3>Run Make Tool</h3>
+
+<p>The <code class="docutils literal"><span class="pre">make</span></code> tool checks timestamps, follows dependencies:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
+<span class="go">make: Nothing to be done for &#39;all&#39;.</span>
+<span class="gp">$</span> touch hello2.c
+<span class="gp">$</span> make
+<span class="go">cc -fPIC -c hello2.c -o hello2.o</span>
+<span class="go">cc -shared -o libhello.so hello1.o hello2.o</span>
+<span class="go">cc hi1.o libhello.so -o hi1 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="go">cc hi2.o libhello.so -o hi2 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="gp">$</span> make
+<span class="go">make: Nothing to be done for &#39;all&#39;.</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">30</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="implicit-dependencies">
+
+<h3>Implicit Dependencies</h3>
+
+<p>Header files (<code class="docutils literal"><span class="pre">*.h</span></code>) are <em>implicit</em> dependencies of compilation:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> grep hello.h *.c
+<span class="go">hello1.c:#include &quot;hello.h&quot;</span>
+<span class="go">hi2.c:#include &quot;hello.h&quot;</span>
+<span class="go">hi1.c:#include &quot;hello.h&quot;</span>
+</pre></div>
+</div>
+<p>The compiler can tell us about dependencies:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> gcc -MM hello1.c -MT hello1.o
+<span class="go">hello1.o: hello1.c hello.h</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">31</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id14">
+
+<h3>Implicit Dependencies</h3>
+
+<p>Implicit dependencies not yet expressed in our <code class="docutils literal"><span class="pre">Makefile</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> touch hello.h
+<span class="gp">$</span> make
+<span class="go">make: Nothing to be done for &#39;all&#39;.</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">32</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id15">
+
+<h3>Implicit Dependencies</h3>
+
+<div><img height="440" src="_images/blockdiag-9d7f28811836523aa50597e602b2907bb08f4888.png" width="832" /></div>
+
+
+<div class="slide-no">33</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="makefile-implicit-dependencies">
+
+<h3>Makefile: Implicit Dependencies</h3>
+
+<p>Extend our <code class="docutils literal"><span class="pre">Makefile</span></code> with implicit dependencies:</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span class="nf">hi1.o</span><span class="o">:</span> <span class="n">hello</span>.<span class="n">h</span>
+<span class="nf">hi2.o</span><span class="o">:</span> <span class="n">hello</span>.<span class="n">h</span>
+<span class="nf">hello1.o</span><span class="o">:</span> <span class="n">hello</span>.<span class="n">h</span>
+</pre></div>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
+<span class="go">cc -c hi1.c -o hi1.o</span>
+<span class="go">cc -fPIC -c hello1.c -o hello1.o</span>
+<span class="go">cc -shared -o libhello.so hello1.o hello2.o</span>
+<span class="go">cc hi1.o libhello.so -o hi1 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+<span class="go">cc -c hi2.c -o hi2.o</span>
+<span class="go">cc hi2.o libhello.so -o hi2 -Wl,-rpath=&#39;$ORIGIN&#39;</span>
+</pre></div>
+</div>
+<p>Everything but <code class="docutils literal"><span class="pre">hello2.o</span></code> rebuilds when <code class="docutils literal"><span class="pre">hello.h</span></code> changes.</p>
+
+
+
+<div class="slide-no">34</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id3">
+
+<h3>Build System: Make</h3>
+
+<ul class="simple">
+<li>Features:<ul>
+<li>Dependencies enable efficient, concurrent (re-)builds.</li>
+</ul>
+</li>
+<li>Limitations:<ul>
+<li>Tricky to maintain implicit dependencies.</li>
+<li>Platform- and tool-specific tables of commands.</li>
+<li>Build rules do not re-run when commands change.</li>
+<li>Need manual rules for &quot;install&quot; and &quot;clean&quot; operations.</li>
+<li>Not reusable with IDEs like Visual Studio and Xcode.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<div class="slide-no">35</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-system-msbuild">
+
+<h3>Build System: MSBuild</h3>
+
+<p>Underlies Visual Studio 2010+ builds.</p>
+<div class="highlight-xml"><div class="highlight"><pre>&lt;Project DefaultTargets=&quot;Build&quot; ToolsVersion=&quot;12.0&quot; ...&gt;
+  ...
+  &lt;ItemGroup&gt;
+    &lt;ClCompile Include=&quot;hi1.c&quot; /&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+    &lt;ProjectReference Include=&quot;hello.vcxproj&quot;&gt;
+      &lt;Project&gt;158CE2ED-F99F-4D09-A981-CF4C46D9A63B&lt;/Project&gt;
+    &lt;/ProjectReference&gt;
+  &lt;/ItemGroup&gt;
+  ...
+&lt;/Project&gt;
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">36</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id16">
+
+<h3>Build System: MSBuild</h3>
+
+<ul class="simple">
+<li>Features:<ul>
+<li>Create and update through Visual Studio IDE.</li>
+<li>Handles implicit dependencies automatically.</li>
+<li>Built-in &quot;clean&quot; operations.</li>
+</ul>
+</li>
+<li>Limitations:<ul>
+<li>Platform- and tool-specific.  Not portable.</li>
+<li>Need manual rules for &quot;install&quot; operations.</li>
+<li>Difficult to merge version control branches.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<div class="slide-no">37</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="example-build-systems">
+
+<h3>Example Build Systems</h3>
+
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Make_%28software%29">Make</a>:
+Canonical dependency-based build system.</li>
+<li><a class="reference external" href="https://martine.github.io/ninja/">Ninja</a>:
+An &quot;assembly language for build systems&quot;.  Designed to be generated.</li>
+<li><a class="reference external" href="https://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">MSBuild</a>:
+Underlies Visual Studio 2010+ builds.</li>
+<li><a class="reference external" href="https://github.com/waf-project/waf">Waf</a>,
+<a class="reference external" href="http://www.scons.org/">Scons</a>:
+Python-based build system frameworks.</li>
+</ul>
+
+
+
+<div class="slide-no">38</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-2" id="generating-build-systems">
+
+<h2>Generating Build Systems</h2>
+
+
+
+
+<div class="slide-no">39</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-system-generators">
+
+<h3>Build System Generators</h3>
+
+<p>Transform a common input specification into platform- and
+tool-specific build files.  Examples:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.gnu.org/software/automake/manual/html_node/GNU-Build-System.html">GNU Build System (autotools)</a>:
+Generates <code class="docutils literal"><span class="pre">configure</span></code> script for distribution with source code
+to generate <a class="reference external" href="https://www.gnu.org/software/make/">GNU make</a>
+build files for local system.</li>
+<li><a class="reference external" href="https://cmake.org">CMake</a>:
+Generates for Make, Ninja, Visual Studio, or Xcode build files
+for local system.</li>
+<li><a class="reference external" href="https://premake.github.io/">Premake</a>,
+<a class="reference external" href="https://chromium.googlesource.com/external/gyp">GYP</a>:
+Generate re-distributable GNU Make, Visual Studio, and Xcode build files.</li>
+</ul>
+
+
+
+<div class="slide-no">40</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake">
+
+<h3>CMake</h3>
+
+<ul class="simple">
+<li>Created by <a class="reference external" href="http://kitware.com">Kitware</a> in 2000 to support
+cross-platform builds for the <a class="reference external" href="http://itk.org">Insight Toolkit</a>.
+Sponsored originally by the <a class="reference external" href="https://www.nlm.nih.gov/">US NLM</a>.</li>
+<li>Generalized incrementally over time.</li>
+<li><a class="reference external" href="https://www.kde.org">KDE</a> (K Desktop Environment)
+switched to CMake in 2006; kicked off widespread adoption.</li>
+<li>Now de-facto standard for cross-platform <code class="docutils literal"><span class="pre">C</span></code>, <code class="docutils literal"><span class="pre">C++</span></code>, and
+<code class="docutils literal"><span class="pre">Fortran</span></code> projects.</li>
+<li>Homepage: <a class="reference external" href="https://cmake.org">https://cmake.org</a></li>
+<li>Documentation: <a class="reference external" href="https://cmake.org/documentation">https://cmake.org/documentation</a></li>
+</ul>
+
+
+
+<div class="slide-no">41</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake-example-code">
+
+<h3>CMake Example Code</h3>
+
+<p>Create a <code class="docutils literal"><span class="pre">CMakeLists.txt</span></code> file for our example:</p>
+<div class="highlight-cmake"><div class="highlight"><pre><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.0</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">Hello</span> <span class="s">C</span><span class="p">)</span>
+
+<span class="nb">add_library</span><span class="p">(</span><span class="s">hello</span> <span class="s">SHARED</span> <span class="s">hello1.c</span> <span class="s">hello2.c</span> <span class="s">hello.h</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">hi1</span> <span class="s">hi1.c</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hi1</span> <span class="s">hello</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">hi2</span> <span class="s">hi2.c</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hi2</span> <span class="s">hello</span><span class="p">)</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">42</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="running-cmake">
+
+<h3>Running CMake</h3>
+
+<p>Make an <em>out-of-source</em> build directory and run <code class="docutils literal"><span class="pre">cmake</span></code> tool:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd </span>build
+<span class="gp">$</span> cmake ..
+<span class="go">...</span>
+<span class="go">-- Build files have been written to: /.../build</span>
+<span class="gp">$</span> ls
+<span class="go">CMakeCache.txt</span>
+<span class="go">CMakeFiles/</span>
+<span class="go">cmake_install.cmake</span>
+<span class="go">Makefile</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">43</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id17">
+
+<h3>Running CMake</h3>
+
+<p>Run <code class="docutils literal"><span class="pre">make</span></code> tool to drive the actual build:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
+<span class="go">Scanning dependencies of target hello</span>
+<span class="go">[ 14%] Building C object CMakeFiles/hello.dir/hello1.c.o</span>
+<span class="go">[ 28%] Building C object CMakeFiles/hello.dir/hello2.c.o</span>
+<span class="go">[ 42%] Linking C shared library libhello.so</span>
+<span class="go">[ 42%] Built target hello</span>
+<span class="go">Scanning dependencies of target hi1</span>
+<span class="go">[ 57%] Building C object CMakeFiles/hi1.dir/hi1.c.o</span>
+<span class="go">[ 71%] Linking C executable hi1</span>
+<span class="go">[ 71%] Built target hi1</span>
+<span class="go">Scanning dependencies of target hi2</span>
+<span class="go">[ 85%] Building C object CMakeFiles/hi2.dir/hi2.c.o</span>
+<span class="go">[100%] Linking C executable hi2</span>
+<span class="go">[100%] Built target hi2</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">44</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="id18">
+
+<h3>Running CMake</h3>
+
+<p>Inspect results:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls
+<span class="go">CMakeCache.txt</span>
+<span class="go">CMakeFiles/</span>
+<span class="go">cmake_install.cmake</span>
+<span class="go">hi1</span>
+<span class="go">hi2</span>
+<span class="go">libhello.so</span>
+<span class="go">Makefile</span>
+<span class="gp">$</span> ./hi1
+<span class="go">hello: world</span>
+<span class="gp">$</span> ./hi2
+<span class="go">hello: world</span>
+<span class="go">hello: world</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">45</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake-generated-makefiles">
+
+<h3>CMake-generated Makefiles</h3>
+
+<ul class="simple">
+<li>Use platform- and tool-specific commands.</li>
+<li>Handle implicit dependencies automatically.</li>
+<li>Provide rules for &quot;install&quot; and &quot;clean&quot; operations.</li>
+<li>Display description of each step with progress percentage.</li>
+<li>Maintain pristine source with <em>out-of-source</em> builds.</li>
+</ul>
+
+
+
+<div class="slide-no">46</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake-gui">
+
+<h3>CMake GUI</h3>
+
+<p>Optionally use a GUI instead of a command prompt:</p>
+<img alt="_images/cmake-gui.png" src="_images/cmake-gui.png" />
+
+
+
+<div class="slide-no">47</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake-generated-vs-project">
+
+<h3>CMake-generated VS Project</h3>
+
+<p>Generated Visual Studio IDE project:</p>
+<img alt="_images/vs-sln.png" src="_images/vs-sln.png" />
+
+
+
+<div class="slide-no">48</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="cmake-syntax-primer">
+
+<h3>CMake Syntax Primer</h3>
+
+<ul class="simple">
+<li>See the <a class="reference external" href="https://cmake.org/cmake/help/v3.3/manual/cmake-language.7.html">cmake-language(7)</a> manual.</li>
+<li><code class="docutils literal"><span class="pre">CMakeLists.txt</span></code> files denote source directories.</li>
+<li><code class="docutils literal"><span class="pre">*.cmake</span></code> files implement modules and scripts.</li>
+</ul>
+<div class="highlight-cmake"><div class="highlight"><pre><span class="c"># line comment</span>
+<span class="c">#[[bracket comment]]</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">VAR1</span> <span class="s">a</span><span class="p">)</span> <span class="c"># &quot;a&quot;</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">VAR2</span> <span class="s">a</span> <span class="s">b</span> <span class="s">c</span><span class="p">)</span> <span class="c"># &quot;a;b;c&quot;</span>
+<span class="nb">message</span><span class="p">(</span><span class="o">${</span><span class="nv">VAR2</span><span class="o">}</span> <span class="s2">&quot;\n&quot;</span> <span class="c"># &quot;abc&quot; (unquoted)</span>
+        <span class="s2">&quot;${VAR2}&quot;</span> <span class="s2">&quot;\n&quot;</span> <span class="c"># &quot;a;b;c&quot; (quoted)</span>
+        <span class="s">[[</span><span class="o">${</span><span class="nv">VAR2</span><span class="o">}</span><span class="s">]]</span> <span class="s2">&quot;\n&quot;</span> <span class="c"># &quot;${VAR2}&quot; (bracket)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">49</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-2" id="conclusion">
+
+<h2>Conclusion</h2>
+
+
+
+
+<div class="slide-no">50</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+<article class="slide level-3" id="build-systems-summary">
+
+<h3>Build Systems Summary</h3>
+
+<ul class="simple">
+<li>Turn sources into programs.</li>
+<li>Organize code to share among programs.</li>
+<li>Encode build dependencies.</li>
+<li>Generated for portability and scale.</li>
+<li>CMake used widely for <code class="docutils literal"><span class="pre">C</span></code>, <code class="docutils literal"><span class="pre">C++</span></code>, and <code class="docutils literal"><span class="pre">Fortran</span></code>.</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Your next lab session will focus on CMake.</li>
+<li>Thank You</li>
+</ul>
+
+
+
+<div class="slide-no">51</div>
+
+
+<div class="slide-footer">
+<a class="slide-footer-image" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img border="0" src="_static/cc-by-sa.png" alt="CC BY-SA"/>
+</a>
+<span class="slide-footer-text">
+  RPI OSS - Spring 2016 - Buildsystems - Kitware, Inc.
+</span>
+</div>
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
