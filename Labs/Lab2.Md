@@ -1,5 +1,5 @@
 ### This Lab (2/5/2016) is on Open Source Licensing.
-### A good reading material is http://opensource.org/licenses and the class lecture notes https://github.com/rcos/CSCI2963-01/blob/master/Lectures/Lec2-Licensing-S2016-RPIpres-By-Patrick-Masson.pdf - All your lab reports should be in a gthub file Lab2.Md - 
+### A good reading material is http://opensource.org/licenses and the class lecture notes https://github.com/rcos/CSCI2963-01/blob/master/Lectures/Lec2-Licensing-S2016-RPIpres-By-Patrick-Masson.pdf - All your lab reports should be in a gthub file Lab2.Md - Give a Creative Commons license to your lab report.
 
 1. Read the four criteria for Free Software http://www.gnu.org/philosophy/free-sw.html
 
@@ -21,3 +21,5 @@ such a license is chosen (Justify for ONE  is enough). Instead of these four, yo
 8.  Take 5 projects from http://rcos.io - create a table which project has which license.
 
 9.  Write five sentences about choosing a project to work in this course and  who will be users/customers  and what license will you choose.
+10.  
+![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a http://creativecommons.org/licenses/by/4.0/ Creative Commons Attribution 4.0 International License.
