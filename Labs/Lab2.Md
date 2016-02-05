@@ -23,14 +23,12 @@ Microsoft [.NET Core uses MIT license]( https://github.com/dotnet/coreclr ), Sai
 6.  Read these licenses  GPL, LGPL and Apache/BSD and discuss which one will be better - for a developer, for a company and for the common good - write 5 to 10 sentences. You may use [tldrlegal](https://tldrlegal.com/license/)
 
 7.  Create a repsotiory and [choose a license](https://github.com/blog/1530-choosing-an-open-source-license)
-8.  
+
 8.  Take 5 projects from (Observatory)http://rcos.io) - create a table which project has which license. for example:
 
 Website | License Present | License
 ---------|:----------|:-------
 https://github.com/rcos/Observatory | Yes | Two Clause BSD License https://en.wikipedia.org/wiki/ISC_license
-
-
 
 
 9.  Write five sentences about choosing a project to work in this course and  who will be users/customers  and what license will you choose.
