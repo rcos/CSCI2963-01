@@ -20,7 +20,7 @@ Useful pages:
 
 1. Setup git
   * Follow the instructions from slides 7 - 27 of https://github.com/rcos/Git-Introduction-Part-I by cloning the repository and opening index.html.
-    * Create a local repository `exercise01` using the command line
+    * Create a local repository `lab3part1` using the command line
   * Create a README.md file.
     * This file should include, as a bullet-ed list:
       * your name
@@ -90,7 +90,7 @@ git push origin master
   *  **Please add a link to the repository in your Lab 3 report**
 
 5. As a table: (one person per table)
-  * Fork the repository https://github.com/mskmoorthy/Story
+  * Fork the repository https://github.com/mskmoorthy/NewStory
   * Create one branch for your table (Table1, Table2,....)
   * you can push the branch the branch by doing  `git checkout -b feature_branch_name` , edit files, `git add` and `git commit` and  `git push -u origin feature_branch_name`
   * Add each member of the table to the repository:
@@ -106,6 +106,6 @@ git push origin master
   * Push to your branch and fix any merge conflicts.
   * Then each table merges with the master branch and submits a pull request to the upstream repository.
   * Resolve any merge conflicts that occur along the way.
-    * You can update your repository to reflect changes in the upstream repository using `git remote add upstream https://github.com/mskmoorthy/Story.git` and `git pull upstream`
+    * You can update your repository to reflect changes in the upstream repository using `git remote add upstream https://github.com/mskmoorthy/NewStory.git` and `git pull upstream`
 
   * [Git Introduction  Part II](https://github.com/rcos/Git-Introduction-Part-II) might be usefull for this (open index.html in the same way as the Introduction Part I slides)
