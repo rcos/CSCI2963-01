@@ -1,4 +1,6 @@
-## This lab (Lab # 3 on 4/18/2015) is about Git (local repository), Github and a few of the simple commands.
+## This lab (Lab # 3 on 2/12/2016) is about Git (local repository), Github and a few of the simple commands.
+
+## Your Lab report will be Lab3.Md
 
 Commands used will include `git add`, `git commit`, `git pull`, `git checkout`, `git branch`, `git push`, `git log`, `git status`, `git diff` , `git tag`,  `git rebase` and `git merge`
 
@@ -38,7 +40,7 @@ git remote add origin <repo url>
 git push origin master
 ```
 
-  ***Provide a link to this repository in your Lab3 blog post.***
+  ***Provide a link to this repository in your Lab3.Md .***
 
 3. Create a file `first.py` that prints "Hello World!".
   * Add, commit, and push the file to your github repository on the master branch with `git push origin master`.
@@ -74,10 +76,10 @@ git push origin master
 
 ## Part 3
 
-1. Fork the repository https://github.com/mskmoorthy/pulreq/
-  * Make a file named &lt;firstName lastName>, add today's date on the first line (9/18/2015), and make a pull request.
+1. Fork the repository https://github.com/mskmoorthy/spring2016pulreq/
+  * Make a file named &lt;firstName lastName>.Md, add today's date on the first line (2/12/2016), and make a pull request.
   * Ask a TA to merge your pull request.
-  * You can update your repository to reflect changes in the upstream repository using `git remote add upstream https://github.com/mskmoorthy/pulreq.git` and `git pull upstream`
+  * You can update your repository to reflect changes in the upstream repository using `git remote add upstream https://github.com/mskmoorthy/spring2016pulreq.git` and `git pull upstream`
 
 2. Make sure you understand the command `git diff` from [this example](https://www.safaribooksonline.com/library/view/version-control-with/9780596158187/ch08s02.html)
   * Examine the content of the diff file from the previous question (your pull request)
