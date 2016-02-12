@@ -78,7 +78,7 @@ git push origin master
 
 ## Part 3
 
-1. Fork the repository https://github.com/mskmoorthy/spring2016pulreq/
+1. Fork the repository https://github.com/mskmoorthy/spring2016pullreq/
   * Make a file named &lt;firstName lastName>.Md, add today's date on the first line (2/12/2016), and make a pull request.
   * Ask a TA to merge your pull request.
   * You can update your repository to reflect changes in the upstream repository using `git remote add upstream https://github.com/mskmoorthy/spring2016pulreq.git` and `git pull upstream`
