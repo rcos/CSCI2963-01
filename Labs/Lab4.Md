@@ -1,4 +1,4 @@
-# Lab 4: Documentation (9/25/2015)
+# Lab 4: Documentation (2/19/2016)
 > #### Created by Brian Callahan (Local BSD Guru)
 https://news.ycombinator.com/item?id=9240533 </br>
 and </br>
@@ -111,6 +111,6 @@ Now that your diff is submitted, you may be asked to provide more information ov
 
 If everything checks out, you should see your name in the FreeBSD or OpenBSD commit logs soon.
 
-*Make sure you write up in a blog post about what you changed, why it is important to maintain good documentation, and what you have learned from this lab.  Also include a write-up of our debate last class, and specifically the reasons for open source software, reasons for proprietary software, reasons why a company and an individual might choose one or the other, which you would choose if you were doing a side project and which you would choose if you were starting a company and why.*
+*Make sure you write up in a lab report (as  markdown file in your github page)  about what you changed, why it is important to maintain good documentation, and what you have learned from this lab.  Also include a write-up of our debate last class, and specifically the reasons for open source software, reasons for proprietary software, reasons why a company and an individual might choose one or the other, which you would choose if you were doing a side project and which you would choose if you were starting a company and why.*
 
 *Also add the diff you sumbited and a link to your commit request email in your blog post*
