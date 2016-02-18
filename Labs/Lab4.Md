@@ -23,7 +23,7 @@ FreeBSD's documentation can be found [here](https://www.freebsd.org/docs.html)
 
 The primary documents are the [Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/) and the [man pages](https://www.freebsd.org/cgi/man.cgi).
 
-The Handbook is quite large, and covers every aspect of the system. The manual pages also describe the system, but from a different perspective. There are also smaller handbooks, such as the [Developer's Handbook](https://www.freebsd.org/doc/en_US.ISO8859­1/books/developers­handbook/) and the [Porter's Handbook](https://www.freebsd.org/doc/en_US.ISO8859­1/books/porters­handbook/)
+The Handbook is quite large, and covers every aspect of the system. The manual pages also describe the system, but from a different perspective. There are also smaller handbooks, such as the [Developer's Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/) and the [Porter's Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/)
 
 ## [OpenBSD](http://www.openbsd.org)
 OpenBSD's primary documentation is the [FAQ](http://www.openbsd.org/faq/index.html)
