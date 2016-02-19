@@ -117,4 +117,4 @@ If everything checks out, you should see your name in the FreeBSD or OpenBSD com
 
 *Make sure you write up in a lab report (as  markdown file in your github page)  about what you changed, why it is important to maintain good documentation, and what you have learned from this lab. 
 
-*Also add the diff you sumbited and a link to your commit request email in your blog post*
+*Also add the diff you submitted and a link to your commit request email in your blog post*
