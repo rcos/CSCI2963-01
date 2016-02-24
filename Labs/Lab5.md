@@ -1,4 +1,4 @@
-## Week 5 Lab 10/2/2015 Friday - Build Systems
+## Week 5 Lab 2/26/2016 Friday - Build Systems
 
 - Download CMake from this website https://cmake.org/download/
 
