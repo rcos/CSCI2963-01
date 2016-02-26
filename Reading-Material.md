@@ -12,6 +12,8 @@ Besides the reading materials mentioned in lecture slides and home works, here a
 
 - Read the article about "Happy Birth Day Song" may go into a public domain (this was also mentioned in class by a student) http://www.nytimes.com/2015/08/05/business/media/an-old-songbook-could-put-happy-birthday-in-the-public-domain.html?_r=0
 
+- Karim R. Lakhani and Robert G Wolf  Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects  http://ocw.mit.edu/courses/sloan-school-of-management/15-352-managing-innovation-emerging-trends-spring-2005/readings/lakhaniwolf.pdf
+
 - The Best Software Writing by by Joel Spolsky http://library.asyou.az/categories/ict/The%20Best%20Software%20Writing%20I%20-%20J.%20Spolsky%20(Apress,%202005)%20WW.pdf  Review of this book here http://blog.codinghorror.com/show-dont-tell/
 
 - As a computer scientist, what would you do if you want to exercise your brain every morning? Read other people's code in the morning before you start writing code of your own. (from quora) http://www.quora.com/As-a-computer-scientist-what-would-you-do-if-you-want-to-exercise-your-brain-every-morning
