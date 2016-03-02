@@ -28,3 +28,7 @@ His TED talk video http://www.ted.com/talks/mihaly_csikszentmihalyi_on_flow?lang
 - Dan Pilone, Russ Miles, Head First Software Development. , O'Reilly, ISBN-13: 978-0596527358
 ISBN-10: 0596527357  (Continuous Integration and Testing )
 
+- Jono Bacon - The Art of Community http://www.artofcommunityonline.org/downloads/jonobacon-theartofcommunity-1ed.pdf
+
+- Jim Whitehurst - The Open Organization Field Guide Guide: Practical Tips for Igniting Passion and Performance https://opensource.com/open-organization/resources/field-guide
+
