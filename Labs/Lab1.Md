@@ -38,7 +38,7 @@ d. Linux
     - Take a screenshot and add to `lab1.md`
 
 e. Regex
-  1. In your Foundations of Computer Science class you learned about Regular expressions. (If you have not taken Foundations of Computer Science class, please talk to the instructor for an explination)  
+  1. In your Foundations of Computer Science class you learned about Regular expressions. (If you have not taken Foundations of Computer Science class, please talk to the instructor for an explanation)  
   2. Please do all the practice problems given [here](http://regexone.com/) (moving over Interactive Tutorial in the top right corner will get this). 
     - To get full credit, do at least 7 problems.
     - Take a screenshot and add to `lab1.md`

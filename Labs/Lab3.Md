@@ -7,7 +7,7 @@
 Commands used will include `git add`, `git commit`, `git pull`, `git checkout`, `git branch`, `git push`, `git log`, `git status`, `git diff` , `git tag`,  `git rebase` and `git merge`
 
 - Use the command line (or git shell) for this lab
-> Command line is prefered - your ubuntu usb should help
+> Command line is preferred - your ubuntu usb should help
 
 Useful pages:
 - A cheat sheet for [git commands](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
@@ -105,7 +105,7 @@ git push origin master
 
 
 6. Each member should clone the table's repository and checkout your table's branch
-  * Locally, each each member should create a file called `table_<number>.Md`
+  * Locally, each member should create a file called `table_<number>.Md`
     * Write your project ideas inside.
   * Push to your branch and fix any merge conflicts.
   * Then each table merges with the master branch and submits a pull request to the upstream repository.
