@@ -58,6 +58,6 @@
 
         >Upload your five videos to youtube and provide links. Is there a leader for each of the five projects? Who would you call the leader?
 
-    Make sure to include screenshots and comments in your blog post.
+    Make sure to include screenshots and comments in your lab report.
 
 Part 2
