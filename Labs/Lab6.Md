@@ -5,7 +5,7 @@
 #### Dr. Marcus Hanwelltalked about community and how people co-operates to contribute to a project
 #### In this lab, we will explore this further using automatic tools, software and manually.
 
-### Next Friday, you have to make a pitch slide presentation for your project. You will find the grading rubrics for the project here 
+### Next Friday, you have to make a pitch slide presentation for your project. You will find the grading rubrics for the project here https://docs.google.com/spreadsheets/d/1amSHK84DYBdtH1n_0hi6xqbtTk9kYcD2cDZQdQwS1xw/edit?usp=sharing
 > This will be done by groups (each table is a group, if there are less than 3 student, or more than 5, find a new table)  
 > All the results should be documented in a labreport6.md and pushed to in your Github account.
 
