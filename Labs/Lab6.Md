@@ -61,3 +61,9 @@
     Make sure to include screenshots and comments in your lab report.
 
 Part 2
+  1. Please read the tutorial on unit tests from here http://pythontesting.net/framework/unittest/unittest-introduction 
+  you will be using unit test module
+    -  Please copy the markdown.py from https://github.com/okken/markdown.py/blob/master/markdown.py and https://github.com/okken/markdown.py/blob/master/test_markdown_unittest.py and make sure that you can run this program.
+    -  Now add translations for "#" to go to <h1> and at the end of the text with </h1> and "##" with <h2> and </h2> ">" for <blockquote> amd when there is no ">" end it with </blockquote> (This link https://daringfireball.net/projects/markdown/basics shows the translation used) Write unit tests for the three additional constructs you did.
+    -  Please pass on your link to code and testcode (from github) and show the results in lab6.md
+  
