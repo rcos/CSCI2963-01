@@ -9,7 +9,7 @@
 > This will be done by groups (each table is a group, if there are less than 3 student, or more than 5, find a new table)  
 > All the results should be documented in a labreport6.md and pushed to in your Github account.
 
-- Part 1
+## Part 1
    1. Project selection -
       - Take five projects from https://rcos.io/projects  and clone them locally.
        >(table 1 takes the first five, table 2 takes the next 5 and so on - 
@@ -34,12 +34,12 @@
   3. Streaming Visualization -
      - Read the webpage http://gource.io/.
      - Download gource using `sudo apt-get install gource` .
-     - Go to each of the five cloned repository directories and execute the coomand
+     - Go to each of the five cloned repository directories and execute the command
      `gource`
      - You will get a streaming video of the activity in that project.
      - Now, create a youtube video of these projects.
      - Install ffmpeg using `sudo apt-get install ffmpeg` or install avconv using `sudo apt-get install avconv`.
-      - Excute the following two commands from each of the cloned repositories:
+     - Execute the following two commands from each of the cloned repositories:
       ```
       gource -1280x720 -o gource.ppm --time-scale 3
       ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i gource.ppm  -vcodec mpeg4 -b 3000k -s hd480 gource.mp4
@@ -60,10 +60,9 @@
 
     Make sure to include screenshots and comments in your lab report.
 
-Part 2
-  1. Please read the tutorial on unit tests from here http://pythontesting.net/framework/unittest/unittest-introduction 
+## Part 2
+1. Please read the tutorial on unit tests from here http://pythontesting.net/framework/unittest/unittest-introduction 
   you will be using unit test module
-    -  Please copy the markdown.py from https://github.com/okken/markdown.py/blob/master/markdown.py and https://github.com/okken/markdown.py/blob/master/test_markdown_unittest.py and make sure that you can run this program.
-    -  Now add translations for "#" to go to <h1> and at the end of the text with </h1> and "##" with <h2> and </h2> . "###" for <h3> amd </h3> ">" for <blockquote> amd when there is no ">" end it with </blockquote> (This link https://daringfireball.net/projects/markdown/basics shows the translation used - https://daringfireball.net/projects/markdown/basics.text  is the markdown syntax for the same page ) Write unit tests for the three additional constructs you did.
-    -  Please pass on your link to code and testcode (from github) and show the results in lab6.md
-  
+2.  Please copy the markdown.py from https://github.com/okken/markdown.py/blob/master/magit@github.com:rcos/CSCI2963-01.gitrkdown.py and https://github.com/okken/markdown.py/blob/master/test_markdown_unittest.py and make sure that you can run this program.
+3.  Now add translations for "#" to go to `<h1>` and at the end of the text with `</h1>` and "##" with `<h2>` and `</h2>` . "###" for `<h3>` and `</h3>` ">" for '<blockquote>' and when there is no ">" end it with '</blockquote>' (This link https://daringfireball.net/projects/markdown/basics shows the translation used - https://daringfireball.net/projects/markdown/basics.text  is the markdown syntax for the same page ) Write unit tests for the three additional constructs you did.
+4.  Please pass on your link to code and testcode (from github) and show the results in lab6.md
