@@ -28,6 +28,7 @@
   1. Install
     - Clone the project `https://github.com/hoxu/gitstats` locally, and run `make install`
       > Homebrew / Linuxbrew users can use `brew install --HEAD homebrew/head-only/gitstats`
+
     - Gitstats requires gnuplot. To install, run `sudo apt-get install gnuplot-x11`(or the appropiate command for your platform).
   2. Running
     - From the command line, run `gitstats <path to project1 git repo> <output path>` inside the cloned project directory
@@ -83,5 +84,6 @@
   >
   > Look under PARAGRAPHS, HEADERS, BLOCKQUOTES for exact input and output
   > 
+
 4. Write unit tests for the three additional constructs you did.
 5. Add your code to github, add links to your code and testcode, and show the results in lab6.md
