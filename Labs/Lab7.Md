@@ -1,4 +1,4 @@
-## Lab 8 - Scientific Computation 10/30/2015
+## Lab 7 - Scientific Computation 3/25/2016
 
 - Graphs and Networks are ubiquitous in Scientific Computations. Networkx is an open source python package located here https://networkx.github.io/
 
