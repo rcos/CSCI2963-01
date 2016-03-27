@@ -1,4 +1,4 @@
-## Lab 9 (11/6/2015) on Statistical Computing/Open Data/Data Science/Machine Learning
+## Lab 9 (4/1/2016) on Statistical Computing/Open Data/Data Science/Machine Learning
 
 Data Science, Statistical Modeling and Machine learning are important, current topics in Computer Science. There has been a lot of open source software and open data available.
 
@@ -24,4 +24,4 @@ For this lab, please do the following - Lab report should be in your github page
 5. (optional) Read the kaggle [R tutorial on Machine Learning](https://www.datacamp.com/courses/kaggle-tutorial-on-machine-learing-the-sinking-of-the-titanic) (Random forest is also discussed in chapter 4 of the Zhao's book)
 (you can login with your facebook or google plus account or register)
 
-6.  Write a paragraph description of the status of your project - What did you do last week on your project? You only have 4 more weeks to finish your project.
+6.  Write a paragraph description of the status of your project - What did you do last week on your project? You only have 5 or 6 more weeks to finish your project.
