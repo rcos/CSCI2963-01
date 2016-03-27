@@ -9,6 +9,7 @@ Now back to the Graduate Admissions
 Gradaute Admssions dataset is [available in R](http://www.ats.ucla.edu/stat/data/binary.csv) If you issue a R Command str(admissions) tells you what the columns of this data set contain (namely admit (0 or 1), GRE score, GPA and Rank). There are 400 data points. First you have to convert the numerical entries into class variables) - These two command of R will do that
 
 col_names <- names(admissions)
+
 admissions[,col_names] <- lapply(admissions[,col_names] , factor)
 
 For this lab, please do the following - Lab report should be in your github page
