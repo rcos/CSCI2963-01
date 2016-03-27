@@ -2,11 +2,14 @@
 
 Data Science, Statistical Modeling and Machine learning are important, current topics in Computer Science. There has been a lot of open source software and open data available.
 
-[This site](http://www.analyticsvidhya.com/blog/2014/11/data-science-projects-learn/) recommends five projects to try in order to learn data science. In this lab you will be doing the first project - namely Titanic Data. This is available on [kaggle](https://www.kaggle.com/c/titanic) (Kaggle holds competitions on machine learning/data science - A couple of years ago, one RPI student Diogo(also worked in RCOS) won first place in the [cause-effect pairs competition](https://www.kaggle.com/c/cause-effect-pairs/forums/t/5702/code-of-top-ranking-participants/30618) and [his code can be found here](http://rcos.rpi.edu/projects/protoml/) - So you too can participate in the near future and win)
+[This site](http://www.analyticsvidhya.com/blog/2014/11/data-science-projects-learn/) recommends five projects to try in order to learn data science.  (Kaggle holds competitions on machine learning/data science - A couple of years ago, one RPI student Diogo(also worked in RCOS) won first place in the [cause-effect pairs competition](https://www.kaggle.com/c/cause-effect-pairs/forums/t/5702/code-of-top-ranking-participants/30618) and [his code can be found here](http://rcos.rpi.edu/projects/protoml/) - So you too can participate in the near future and win)
 
-Now back to the titanic
+Now back to the Graduate Admissions
 
-Titanic dataset is [available in R](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/Titanic.html) and  in [csv format](https://vincentarelbundock.github.io/Rdatasets/csv/datasets/Titanic.csv)
+Gradaute Admssions dataset is [available in R](http://www.ats.ucla.edu/stat/data/binary.csv) If you issue a R Command str(admissions) tells you what the columns of this data set contain (namely admit (0 or 1), GRE score, GPA and Rank). There are 400 data points. First you have to convert the numerical entries into class variables) - These two command of R will do that
+
+col_names <- names(admissions)
+admissions[,col_names] <- lapply(admissions[,col_names] , factor)
 
 For this lab, please do the following - Lab report should be in your github page
 
@@ -17,7 +20,7 @@ For this lab, please do the following - Lab report should be in your github page
 
     *hint In RStudio, go to Tools -> Install Packages, then type arules into the "Packages" box, hit ok and do the same thing with arulesViz*
 
-3. Implement association rules for Titanic Data set (experiment with different parameters. Look in chapter 9 of the book on page 89 for support and confidence )
+3. Implement association rules for Graduate Admissions Data set (experiment with different parameters. Look in chapter 9 of the book on page 89 for support and confidence )
 
 4. Try different visulaizations as done in chapter 9 of the text book. (Things have changed with R too - To load RGraphviz  go to a new Rscript window and type  `source("http://bioconductor.org/biocLite.R")`   Next, type in `biocLite("Rgraphviz")` After this you will be able to plot the graph of rules.)
 
