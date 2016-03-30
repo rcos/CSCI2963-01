@@ -1,4 +1,6 @@
-10/3/2015 Lecture is found here https://github.com/rcos/StatComputing
+### 3/29/2016 Lecture is found here 
+
+https://github.com/rcos/StatComputing
 
 
 ## Interesting link - Solving easy problems (puzzle) the hard way Ordinary Least Square Regression (OLS)
