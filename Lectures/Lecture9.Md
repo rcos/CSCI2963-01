@@ -1,5 +1,10 @@
 10/3/2015 Lecture is found here https://github.com/rcos/StatComputing
 
+
+## Interesting link - Solving easy problems (puzzle) the hard way Ordinary Least Square Regression (OLS)
+
+http://www.cerebralmastication.com/2012/03/solving-easy-problems-the-hard-way/
+
 Sample Code in R written in class
 
 ## Simple commands
