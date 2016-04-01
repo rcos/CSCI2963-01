@@ -60,7 +60,7 @@ It will show us what database we're connected to. We can then access our definit
 > db.definitions
 ```
 
-Now let's execute the following commands and take note of what they do (tell a TA what each of these commands does):
+Now let's execute the following commands and take note of what they do:
 
 - `db.definitions.find()`
 - `db.definitions.findOne()`
