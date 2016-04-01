@@ -4,6 +4,7 @@ Data Science, Statistical Modeling and Machine learning are important, current t
 
 [This site](http://www.analyticsvidhya.com/blog/2014/11/data-science-projects-learn/) recommends five projects to try in order to learn data science. Another place to look at is [Kaggle](https://kaggle.com). Kaggle holds competitions on machine learning/data science. A couple of years ago, Diogo, a student in RCOS, won first place in the [cause-effect pairs competition](https://www.kaggle.com/c/cause-effect-pairs/forums/t/5702/code-of-top-ranking-participants/30618) and [his code can be found here](http://rcos.rpi.edu/projects/protoml/). If you are interested in data science you can participate (and maybe even win!).
 
+Here is a smple program with apriori rules https://github.com/rcos/CSCI2963-01/blob/master/Labs/lab8-titanic-example-2015.R using titanic disaster data
 Now back to the Graduate Admissions data:
 
 Graduate Admssions dataset is [available in R](http://www.ats.ucla.edu/stat/data/binary.csv) If you issue a R Command str(admissions) tells you what the columns of this data set contain (namely admit (0 or 1), GRE score, GPA and Rank). There are 400 data points. First you have to convert the numerical entries into class variables) - These two command of R will do that
