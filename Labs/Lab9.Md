@@ -1,4 +1,5 @@
 # MongoDB Lab for CSCI2963
+### 4/8/2016
 
 ## Checkpoint 1: Install MongoDB
 
