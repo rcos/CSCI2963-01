@@ -13,4 +13,4 @@
 - Mukul Surajiwale, Alwin Joy, Ryan Manske, Nathan Potolsky and Victor Zhu Atom https://docs.google.com/presentation/d/1y5Zt6V-nz-XqX747  and https://drive.google.com/file/d/0B3AxVWEWY1u0TjE1S0NlY1ZTMXc/view?usp=sharing
 LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p
 - Eric Gunderson, Louis Silvestrand Matt Gilman Scalr (Cloud COmputing) https://docs.google.com/presentation/d/1JfmhGK3renlILtHVkqzY2-ICSlByhKu9ueutKfrZsnY/edit#slide=id.p
-- Christian Encarnacion, Ashwin Raghuraman, Steven Scally and Jayson Tung, Swift ALgorithm Club https://docs.google.com/presentation/d/1kgSteDsO2EGiOKYC_Hja_Bau7f8OJvt8jQUcqNL441Y/edit#slide=id.p
+- Christian Encarnacion, Ashwin Raghuraman, Steven Scally and Jayson Tung, Swift Algorithm Club https://docs.google.com/presentation/d/1kgSteDsO2EGiOKYC_Hja_Bau7f8OJvt8jQUcqNL441Y/edit#slide=id.p
