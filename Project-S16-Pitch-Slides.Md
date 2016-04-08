@@ -1,7 +1,7 @@
 # Spring 2016 Project Pitch Slides for Introduction to Open Source Software (3/25/2016) 
 
 - **Auto Login:** Sean Waclawik https://docs.google.com/presentation/d/19yFc4ZK7H81wID0rD5aqw-f_UnLK0qGLjN7Kk4QWxYo/edit#slide=id.p
-- Owen Stenson Command Line Argument Parser for Rust https://docs.google.com/presentation/d/17XrUNMZMytbeKCoyVRZcH7xqieR_WlJ29kT8mQMn2KA/edit#slide=id.p
+- **Command Line Argument Parser for Rust:** Owen Stenson https://docs.google.com/presentation/d/17XrUNMZMytbeKCoyVRZcH7xqieR_WlJ29kT8mQMn2KA/edit#slide=id.p
 - **Split Screen:** Sam Deslandes https://rcos.io/projects/tassiahmed/SplitScreen/profile
 - **Table Tome:** Jonathan Wrona, Dan Lowe, Cameron Root http://slides.com/jonathanwrona/table-tome-os#/
 - **MineBot:** Oliver Poulin, Graham Atkinson https://docs.google.com/presentation/d/1g_jKlhKvjUonEQfiJt8Fu6rFeQCZ4uG81-YKFDQyN0I/edit#slide=id.p
