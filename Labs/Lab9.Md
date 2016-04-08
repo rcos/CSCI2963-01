@@ -146,3 +146,5 @@ And if we called it again:
   dates: [2016-03-31 23:05:14.966395, 2016-03-31 23:06:08.152208]
 }
 ```
+
+Hint: Look at MongoDB documentation for $push
