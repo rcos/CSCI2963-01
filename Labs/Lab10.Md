@@ -1,3 +1,8 @@
-## Lab 10 - Open Hardware - Aruino Project
+## Lab 10 Spring 2016 4/15/2016 Open Hardware
 
-https://github.com/rcos/CSCI2961-01/blob/master/Labs/Lab10.pdf  is Lab number 10
+# Open Hardware Lab
+https://docs.google.com/document/d/1LdXr98Gc_7M-NYLwLmZAB_QimCZpCATgetdcRvzvSUw/edit?usp=sharing
+
+or
+
+https://github.com/rcos/CSCI2961-01/blob/master/Labs/Lab10.pdf
