@@ -14,10 +14,6 @@ Lab 6 - 3/11/2016 - Community and unit tests
 Lab 10 - 4/15/2016 - Open Hardware Lab
 ![UTS helping out](https://github.com/rcos/CSCI2963-01/blob/master/Photos/lab10-11.jpg)
 
-
-Lab 10 - 4/15/2016 - Open Hardware Lab
-![UTS helping out](https://github.com/rcos/CSCI2963-01/blob/master/Photos/lab10-12.jpg)
-
 Lab 10 - 4/15/2016 - Open Hardware Lab
 ![UTS helping out](https://github.com/rcos/CSCI2963-01/blob/master/Photos/lab10-13.jpg)
 
