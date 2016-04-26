@@ -1,4 +1,5 @@
-# Spring 2016 Project Pitch Slides for Introduction to Open Source Software (3/25/2016) 
+# Spring 2016 Projects 
+### Pitch Slides were presented for Introduction to Open Source Software (3/25/2016) 
 
 - **Auto Login:** Sean Waclawik https://docs.google.com/presentation/d/19yFc4ZK7H81wID0rD5aqw-f_UnLK0qGLjN7Kk4QWxYo/edit#slide=id.p    
   - Date for Presentation  5/6
