@@ -26,7 +26,7 @@
     "tag": "1.2.9",
     "commit": "eb40db596a65748b61d693aa451784b03f461828"
   },
-  "_source": "git://github.com/sayanee/angularjs-pdf.git",
+  "_source": "https://github.com/sayanee/angularjs-pdf.git",
   "_target": "~1.2.0",
   "_originalSource": "angular-pdf"
 }

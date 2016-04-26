@@ -33,7 +33,7 @@
     "tag": "v2.0.5",
     "commit": "ded42ea8e64aac28b066d8a10b073b73aef629fe"
   },
-  "_source": "git://github.com/ninjatronic/angular-base64.git",
+  "_source": "https://github.com/ninjatronic/angular-base64.git",
   "_target": "~2.0.5",
   "_originalSource": "angular-base64"
 }
