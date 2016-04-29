@@ -10,7 +10,7 @@
 - **Table Tome:** Jonathan Wrona, Dan Lowe, Cameron Root http://slides.com/jonathanwrona/table-tome-os#/
   - **Date for Presentation 5/10**
 - **MineBot:** Oliver Poulin, Graham Atkinson https://docs.google.com/presentation/d/1g_jKlhKvjUonEQfiJt8Fu6rFeQCZ4uG81-YKFDQyN0I/edit#slide=id.p
-  - **Date for Presentation ???(please correct this and do a git pull request)**
+  - **Date for Presentation 5/6**
 - **Labyrinth** Chandrika Sinha, Lars Olsson https://drive.google.com/file/d/0B3AxVWEWY1u0YzRTQnoxSVJiUGc/view?usp=sharing
   - **Date for Presentation 5/6**
 - **Relax:** Erin Jordan, Shreya Patel, Jon Harris, Zefanya Putri https://docs.google.com/presentation/d/1DJ7TT39kM-pe5fcPAFGlaKSM13qS66wc8IaY4J2GMHo/edit#slide=id.p
