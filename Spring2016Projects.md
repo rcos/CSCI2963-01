@@ -29,5 +29,6 @@ LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p
   -  **Slides** https://docs.google.com/presentation/d/1VzPSouW_X022ScTqId2HYSSIsiHieZdKzSKdYR1Ef_M/edit?usp=sharing
   -  **Blog** https://rcos.io/projects/mattgilman10/butter-desktop/blog
   -  **Repository** https://github.com/mattgilman10/butter-desktop
+  -  **Schedule**  https://docs.google.com/spreadsheets/d/1Jry2VRQQWjf6XyTEga8FGYUPI-BRoTG-ygTuUbejWws/edit#gid=0
 - **Algorithm Club:** Christian Encarnacion, Ashwin Raghuraman, Steven Scally and Jayson Tung https://docs.google.com/presentation/d/1kgSteDsO2EGiOKYC_Hja_Bau7f8OJvt8jQUcqNL441Y/edit#slide=id.p
   - **Date for Presentation 5/6**
