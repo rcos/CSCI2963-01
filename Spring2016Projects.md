@@ -23,7 +23,7 @@
 - **Table Tome:** Jonathan Wrona, Dan Lowe, Cameron Root
   - **Pitch Slides** http://slides.com/jonathanwrona/table-tome-os#/
   - **Date for Presentation 5/10**
-  - **Slides**
+  - **Presentation Slides**
   - **Repository** https://github.com/jonwrona/Table-Tome
   - **Blog** https://rcos.io/projects/table-tome/table-tome/blog
 - **MineBot:** Oliver Poulin, Graham Atkinson 
@@ -47,7 +47,7 @@
 - **Pokeman Snowdown:** Adeel Phanse. Alvin Leung, Jacob Arriola, Matt Bu 
   - **Pitch Slides** https://drive.google.com/file/d/0B3AxVWEWY1u0VHAwZHRQSndHb28/view?usp=sharing
   - **Date for Presentation 5/6**
-  - **Presentation Slides** 
+  - **Presentation Slides** https://slack-files.com/files-pri-safe/T033VT1N8-F16PX4BL6/pokesnowdown_presentation_final.pdf?c=1462556426-05d57900879c998aff13852263acffb73a8d1cfe
   - **Repository** https://github.com/Phansa/PokeSnowdown
   - **Blog** https://rcos.io/projects/Phansa/PokeSnowdown/blog
 - **Open Javascript Whiteboard:** (continued from fall 2015) Cristian Rivera, Kevin Stoner, Paul Sambolin and Donald Disha 
