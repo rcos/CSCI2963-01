@@ -11,13 +11,13 @@
 - **Command Line Argument Parser for Rust:** Owen Stenson
   - **Pitch Slides** https://docs.google.com/presentation/d/17XrUNMZMytbeKCoyVRZcH7xqieR_WlJ29kT8mQMn2KA/edit#slide=id.p
   - **Date for Presentation 5/6**
-  - **Slides** https://slack-files.com/files-pri-safe/T033VT1N8-F16PTUA1L/clap-rs_slides.pdf?c=1462551295-a1ed10f7dd958b1e10da6c279f36373eb4d8b6d9
+  - **Presentation Slides** https://slack-files.com/files-pri-safe/T033VT1N8-F16PTUA1L/clap-rs_slides.pdf?c=1462551295-a1ed10f7dd958b1e10da6c279f36373eb4d8b6d9
   - **Repository** https://github.com/stensonowen/clap-rs
   - **Blog** https://rcos.io/projects/stensonowen/clap-rs/blog
 - **Split Screen:** Sam Deslandes
   - **Pitch Slides** 
   - **Date for Presentation 5/6**
-  - **Slides**
+  - **Presentation Slides** https://docs.google.com/presentation/d/1jxZoIzVDiZZatcWGIdPBi0R2CQyf8bRwLhhn2Tya_6U/edit#slide=id.p
   - **Repository** https://github.com/tassiahmed/SplitScreen
   - **Blog** https://rcos.io/projects/tassiahmed/SplitScreen/blog
 - **Table Tome:** Jonathan Wrona, Dan Lowe, Cameron Root
@@ -41,7 +41,7 @@
 - **Relax:** Erin Jordan, Shreya Patel, Jon Harris, Zefanya Putri 
   - **Pitch Slides** https://docs.google.com/presentation/d/1DJ7TT39kM-pe5fcPAFGlaKSM13qS66wc8IaY4J2GMHo/edit#slide=id.p
   - **Date for Presentation 5/6**
-  - **Presentation Slides** 
+  - **Presentation Slides** https://docs.google.com/presentation/d/1WSf-0S1TCgHXTNsJ2EJUs47pPx-Ip_J9EWNaveN_0I0/edit#slide=id.p
   - **Repository** https://github.com/erinjordan24/relax
   - **Blog** https://rcos.io/projects/erinjordan24/relax/blog
 - **Pokeman Snowdown:** Adeel Phanse. Alvin Leung, Jacob Arriola, Matt Bu 
@@ -53,7 +53,7 @@
 - **Open Javascript Whiteboard:** (continued from fall 2015) Cristian Rivera, Kevin Stoner, Paul Sambolin and Donald Disha 
   - **Pitch Slides** https://docs.google.com/presentation/d/13DFbx1S-HpCQrJynzY4afmDaaQbVvXVnP565Gj7rXkI/edit#slide=id.g10e77d7083_0_0
   - **Date for Presentation 5/6**
-  - **Presentation Slides**
+  - **Presentation Slides** https://docs.google.com/presentation/d/1oOY-33bLAtSbNVv859IPSFYnebOczkrQz5zGyfZ69PE/edit
   - **Repository** https://github.com/paulSambolin/draw
   - **Blog** https://rcos.io/projects/PaulSambolin/OpenJavascriptWhiteboard/blog
 - **Pizza Dash:** Morgan Larkin, Joe Iaquinto, Dan Gorman. Perri Adams, 
