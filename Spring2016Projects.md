@@ -13,6 +13,9 @@
   - **Date for Presentation 5/6**
 - **Labyrinth** Chandrika Sinha, Lars Olsson https://drive.google.com/file/d/0B3AxVWEWY1u0YzRTQnoxSVJiUGc/view?usp=sharing
   - **Date for Presentation 5/6**
+  - **Slides** https://docs.google.com/presentation/d/1v7JSDaomgjKKcC0zcqHec6lFDv6u_Z_jI1ghPzqbsMA/edit?ts=572ca464#slide=id.g12ffc454af_5_17
+  - **Blog** https://rcos.io/projects/sinhac/labyrinth/blog
+  - **Repository** https://github.com/sinhac/labyrinth
 - **Relax:** Erin Jordan, Shreya Patel, Jon Harris, Zefanya Putri https://docs.google.com/presentation/d/1DJ7TT39kM-pe5fcPAFGlaKSM13qS66wc8IaY4J2GMHo/edit#slide=id.p
   - **Date for Presentation 5/6**
 - **Pokeman Snowdown:** Adeel Phanse. Alvin Leung, Jacob Arriola, Matt Bu https://drive.google.com/file/d/0B3AxVWEWY1u0VHAwZHRQSndHb28/view?usp=sharing
