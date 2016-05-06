@@ -32,3 +32,6 @@ LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p
   -  **Schedule**  https://docs.google.com/spreadsheets/d/1Jry2VRQQWjf6XyTEga8FGYUPI-BRoTG-ygTuUbejWws/edit#gid=0
 - **Algorithm Club:** Christian Encarnacion, Ashwin Raghuraman, Steven Scally and Jayson Tung https://docs.google.com/presentation/d/1kgSteDsO2EGiOKYC_Hja_Bau7f8OJvt8jQUcqNL441Y/edit#slide=id.p
   - **Date for Presentation 5/6**
+  - **Slides** https://docs.google.com/presentation/d/1vr8LS22Rj_4NR0yQ3jbX_HV0xqZsTIgLoTUlhCc3ePE/edit#slide=id.p
+  - **Repository** https://github.com/axptwig/swift-algorithm-club
+  - **Blog** https://rcos.io/projects/axptwig/swift-algorithm-club/blog
