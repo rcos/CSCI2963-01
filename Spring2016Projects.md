@@ -70,7 +70,7 @@ LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p
   - **Repository** https://github.com/mukulio/AtomX
   - **Blog** https://rcos.io/projects/mukulio/atomx/blog
 - **Butter:** Eric Gunderson, Louis Silvestrand Matt Gilman
-  - ** Pitch Slides** https://docs.google.com/presentation/d/1JfmhGK3renlILtHVkqzY2-ICSlByhKu9ueutKfrZsnY/edit#slide=id.p
+  - **Pitch Slides** https://docs.google.com/presentation/d/1JfmhGK3renlILtHVkqzY2-ICSlByhKu9ueutKfrZsnY/edit#slide=id.p
   - **Date for Presentation 5/3**
   - **Presentation Slides** https://docs.google.com/presentation/d/1VzPSouW_X022ScTqId2HYSSIsiHieZdKzSKdYR1Ef_M/edit?usp=sharing
   -  **Repository** https://github.com/mattgilman10/butter-desktop
