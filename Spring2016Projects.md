@@ -23,8 +23,8 @@
 - **Table Tome:** Jonathan Wrona, Dan Lowe, Cameron Root
   - **Pitch Slides** http://slides.com/jonathanwrona/table-tome-os#/
   - **Date for Presentation 5/10**
-  - **Presentation Slides**
-  - **Repository** https://github.com/jonwrona/Table-Tome
+  - **Presentation Slides** https://docs.google.com/presentation/d/1xp_Xj4B3GaUWCzKo-dBtJGit3oyQhi6I26NuDSeJ5j8/edit#slide=id.p
+  - **Repository** https://github.com/table-tome
   - **Blog** https://rcos.io/projects/table-tome/table-tome/blog
 - **MineBot:** Oliver Poulin, Graham Atkinson 
   - **Pitch Slides** 
@@ -59,14 +59,14 @@
 - **Pizza Dash:** Morgan Larkin, Joe Iaquinto, Dan Gorman. Perri Adams, 
   - **Pitch Slides** https://docs.google.com/presentation/d/1EVMLJznRJFmcdIJXf9tZQb4kjfZUBCSS7OM3HCZOiZ8/edit#slide=id.p 
   - **Date for Presentation 5/6**
-  - **Presentation Slides**
+  - **Presentation Slides** https://docs.google.com/presentation/d/1DKZS9dtPSJB4cxK4F-c0RCaR849W8nRvm2KzpJ89VSI/edit
   - **Repository** https://github.com/PizzadashRPIOpenSource/pizzadash
   - **Blog** https://rcos.io/projects/PizzadashRPIOpenSource/pizzadash/blog
 - **Atom:**Mukul Surajiwale, Alwin Joy, Ryan Manske, Nathan Potolsky and Victor Zhu 
   - **Pitch Slides** https://docs.google.com/presentation/d/1y5Zt6V-nz-XqX747LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p and https://drive.google.com/file/d/0B3AxVWEWY1u0TjE1S0NlY1ZTMXc/view?usp=sharing
 LCWH-WNkiggsukLVU1TfMKtGEeQ/edit#slide=id.p
   - **Date for Presentation 5/10**
-  - **Presentation Slides** 
+  - **Presentation Slides** https://docs.google.com/presentation/d/1S75jHK-sEvJHtp6_ChaK8sBKvFLXEb8lz5gnz9iTzUA/edit#slide=id.g1308c32f43_0_5
   - **Repository** https://github.com/mukulio/AtomX
   - **Blog** https://rcos.io/projects/mukulio/atomx/blog
 - **Butter:** Eric Gunderson, Louis Silvestrand Matt Gilman
